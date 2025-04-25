@@ -1,45 +1,69 @@
-# Decentralized-Identity-Core
-# Decentralized Identity using Blockchain
+# ☕ **ProjectName** Decenttralized Identity - Core
 
 A decentralized identity system built on blockchain that empowers users to own, manage, and control their digital identities without relying on centralized authorities. This project aims to provide secure, private, and tamper-proof digital identity verification using smart contracts.
 
-## 🌐 Overview
+---
 
-Traditional identity systems rely heavily on centralized organizations, which can lead to privacy concerns, data breaches, and single points of failure. This project leverages the power of blockchain technology to create a self-sovereign identity system where:
+## ⚙️ Setup Instructions
 
-- Users control their own identities.
-- Identity data is stored securely and immutably.
-- Verification is trustless and transparent.
-
-## 🚀 Features
-
-- 🔐 User-owned identities (Self-Sovereign Identity)
-- 📄 Immutable identity records on blockchain
-- 🧾 Verifiable credentials and claims
-- 👥 Role-based access to identity attributes
-- 🧠 Smart contract powered identity lifecycle (create, update, revoke)
-
-## 🛠️ Tech Stack
-
-- **Blockchain Platform**: Ethereum / Polygon / any EVM-based chain
-- **Smart Contracts**: Solidity
-- **Frontend**: React.js (optional if you’re building a UI)
-- **Backend (optional)**: Node.js / Express.js for API integration
-- **Wallet Integration**: MetaMask or WalletConnect
-- **Storage (optional)**: IPFS for off-chain identity documents
-
-## 📦 Installation
+### 1. Clone the Repository
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/decentralized-identity.git
-cd decentralized-identity
+git clone https://github.com/Anandsharma-ui/Decentralized-Identity-Core.git
+cd Decentralized-Identity-Core
+```
 
-# Install dependencies (if using frontend/backend)
+### 2. Install Dependencies
+
+```bash
 npm install
+```
 
-# Compile smart contracts
+### 3. Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+PRIVATEKEY="your_core_wallet_private_key"
+CORE_TEST2_SCAN_KEY="your_testnet2_explorer_api_key"
+```
+
+> ⚠️ **Important:** Never share your private key or commit the `.env` file to version control.
+
+---
+
+## 🛠 Hardhat Commands
+
+### Compile Contracts
+
+```bash
 npx hardhat compile
+```
 
-# Deploy smart contracts
-npx hardhat run scripts/deploy.js --network <your-network>
+### Run Tests
+
+```bash
+npx hardhat test
+```
+
+### Deploy Contract
+
+Use a deployment script:
+
+```bash
+npx hardhat run scripts/deploy.js --network core_testnet2
+```
+
+---
+
+## 🔍 Contract Verification
+
+You can verify contracts using Core block explorers:
+
+```bash
+npx hardhat verify --network core_testnet2 <deployed_contract_address> <constructor_args_if_any>
+```
+
+API keys for verification must be included in `.env` as shown above.
+
+---
